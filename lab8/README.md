@@ -58,7 +58,7 @@ The program reads broker and destination settings from `config.json`.
 
 ### ACTIVEMQ
 經典款，舊系統可能都使用這個。
-`docker run -d --name activemq-classic -p 8161:8161 -p 61616:61616 -p 61613:61613 symptoma/activemq:5.18.3`
+`docker run -d --name activemq-classic -p 8161:8161 -p 61616:61616 -p 61613:61613 symptoma/activemq:5.18.3`  
 如果需要調校activemq，那麼就要把data和conf掛載出來，先啓動activemq，把/opt/activemq/conf裡面的資料複制到宿主機。  
-再來就可以直接掛載到宿主機目錄，注意，直接把宿主機目錄修改成任何人都可以read/write。
+再來就可以直接掛載到宿主機目錄，注意，直接把宿主機目錄修改成任何人都可以read/write。  
 `-v /workspace/opt/activemq/data:/opt/activemq/data -v /workspace/opt/activemq/conf:/opt/activemq/conf`
