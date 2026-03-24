@@ -1,0 +1,13 @@
+{
+	"broker": {
+		"host": "127.0.0.1",
+		"port": 61613,
+		"username": "admin",
+		"password": "admin",
+		"host_name": "localhost"
+	},
+	"destinations": {
+		"queue": "lab8.queue",
+		"topic": "lab8.topic"
+	}
+}
