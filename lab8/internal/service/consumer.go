@@ -10,13 +10,16 @@ import (
 	"time"
 
 	"github.com/go-stomp/stomp/v3"
+	"go.uber.org/zap"
 
 	"lab8/internal/config"
+	"lab8/internal/logging"
 )
 
 type Consumer struct {
 	cfg    config.Config
 	stdout io.Writer
+	logger *zap.Logger
 	conn   *stomp.Conn
 	subs   []*namedSubscription
 }
@@ -32,7 +35,9 @@ func NewConsumer(cfg config.Config, stdout io.Writer) (*Consumer, error) {
 		return nil, fmt.Errorf("stdout writer is required")
 	}
 
-	return &Consumer{cfg: cfg, stdout: stdout}, nil
+	logger := logging.NewJSONLogger(stdout, "consumer")
+
+	return &Consumer{cfg: cfg, stdout: stdout, logger: logger}, nil
 }
 
 func (c *Consumer) Run(ctx context.Context) error {
@@ -44,17 +49,13 @@ func (c *Consumer) Run(ctx context.Context) error {
 	}
 	defer c.close()
 
-	if _, err := fmt.Fprintf(c.stdout, "Connected to ActiveMQ at %s\n", c.cfg.Address()); err != nil {
-		return err
-	}
+	c.logger.Info("connected to ActiveMQ", zap.String("address", c.cfg.Address()))
 
 	if err := c.subscribe(); err != nil {
 		return err
 	}
 
-	if _, err := fmt.Fprintln(c.stdout, "Waiting for messages. Press Ctrl+C to stop."); err != nil {
-		return err
-	}
+	c.logger.Info("waiting for messages")
 
 	errCh := make(chan error, len(c.subs))
 	var wg sync.WaitGroup
@@ -126,9 +127,10 @@ func (c *Consumer) subscribe() error {
 			subscription: subscription,
 		})
 
-		if _, err := fmt.Fprintf(c.stdout, "Subscribed %s: %s\n", item.label, item.destination); err != nil {
-			return err
-		}
+		c.logger.Info("subscribed to destination",
+			zap.String("label", item.label),
+			zap.String("destination", item.destination),
+		)
 	}
 
 	return nil
@@ -161,13 +163,11 @@ func (c *Consumer) consume(ctx context.Context, sub *namedSubscription, errCh ch
 			}
 
 			body := strings.TrimRight(string(msg.Body), "\r\n")
-			if _, err := fmt.Fprintf(c.stdout, "[%s] %s => %s\n", sub.label, sub.destination, body); err != nil {
-				select {
-				case errCh <- err:
-				default:
-				}
-				return
-			}
+			c.logger.Info("received message",
+				zap.String("label", sub.label),
+				zap.String("destination", sub.destination),
+				zap.String("body", body),
+			)
 		}
 	}
 }

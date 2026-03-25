@@ -46,17 +46,29 @@ The program reads broker and destination settings from `config.json`.
 
 - Connects to ActiveMQ on startup
 - Subscribes to configured queue and topic
-- Prints every received message to console
+- Emits structured JSON logs to console through zap
 - Stops cleanly on `Ctrl+C`
 
+## Log Output
+
+Each log line is emitted as a single JSON object. Fixed fields include `service`, `module`, and `pid`.
+
+```json
+{"level":"info","timestamp":"2026-03-25T14:23:11.482+0800","msg":"ActiveMQ consumer started","service":"lab8-consumer","module":"app","pid":12345,"config":"config.json"}
+{"level":"info","timestamp":"2026-03-25T14:23:11.740+0800","msg":"connected to ActiveMQ","service":"lab8-consumer","module":"consumer","pid":12345,"address":"127.0.0.1:61613"}
+```
+
 ## Else
+
 如果要用docker來測試，以下提供二種：
 
 ### ARTEMIS
+
 這是下一代的activeMQ，效能上都有所提升，但是，還沒去研究。
 `docker run -d --name artemis -p 8161:8161 -p 61616:61616 -p 61613:61613 -e ARTEMIS_USER=admin -e ARTEMIS_PASSWORD=admin -e ANONYMOUS_LOGIN=true apache/activemq-artemis:latest-alpine`
 
 ### ACTIVEMQ
+
 經典款，舊系統可能都使用這個。
 `docker run -d --name activemq-classic -p 8161:8161 -p 61616:61616 -p 61613:61613 symptoma/activemq:5.18.3`  
 如果需要調校activemq，那麼就要把data和conf掛載出來，先啓動activemq，把/opt/activemq/conf裡面的資料複制到宿主機。  

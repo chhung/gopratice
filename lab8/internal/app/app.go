@@ -3,10 +3,12 @@ package app
 import (
 	"context"
 	"flag"
-	"fmt"
 	"io"
 
+	"go.uber.org/zap"
+
 	"lab8/internal/config"
+	"lab8/internal/logging"
 	"lab8/internal/service"
 )
 
@@ -31,9 +33,8 @@ func Run(ctx context.Context, args []string, stdout, stderr io.Writer) error {
 		return err
 	}
 
-	if _, err := fmt.Fprintf(stdout, "ActiveMQ consumer started, config=%s\n", *configPath); err != nil {
-		return err
-	}
+	logger := logging.NewJSONLogger(stdout, "app")
+	logger.Info("ActiveMQ consumer started", zap.String("config", *configPath))
 
 	return consumer.Run(ctx)
 }
