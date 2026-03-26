@@ -1,0 +1,4 @@
+mongodb:
+  uri: "mongodb://localhost:27017"
+  database: "lab9"
+  timeout_seconds: 10
