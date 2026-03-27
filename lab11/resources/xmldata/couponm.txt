@@ -1,0 +1,214 @@
+<operation table='FUBON.TF_TCOUPONM' type='UPDATE' opType='UPDATE_FIELDCOMP' txInd='BEGIN' ts='2026-03-23 16:09:30.000470' numCols='66' position='00000015790051770582'>
+    <column name='CP_CODE' index='0'>
+      <before-value><![CDATA[202603180072]]></before-value>
+      <after-value><![CDATA[202603180072]]></after-value>
+    </column>
+    <column name='CP_ISSUE_QTY' index='16'>
+      <before-value><![CDATA[1396117]]></before-value>
+      <after-value><![CDATA[1396118]]></after-value>
+    </column>
+    <column name='CP_RETURN_QTY' index='35'>
+      <before-value><![CDATA[5]]></before-value>
+      <after-value><![CDATA[6]]></after-value>
+    </column>
+</operation>
+<operation table='FUBON.TF_TCOUPONM' type='INSERT' opType='INSERT' txInd='WHOLE' ts='2026-03-24 01:02:20.000299' numCols='66' position='00000015810093282618'>
+    <column name='CP_CODE' index='0'>
+      <after-value><![CDATA[202603240001]]></after-value>
+    </column>
+    <column name='CP_NAME' index='1'>
+      <after-value><![CDATA[3月生日會員專屬$333折價券(單品滿990使用)]]></after-value>
+    </column>
+    <column name='CP_SDATE' index='2'>
+      <after-value><![CDATA[2026-03-24 00:00:00]]></after-value>
+    </column>
+    <column name='CP_EDATE' index='3'>
+      <after-value><![CDATA[2026-04-22 23:59:59]]></after-value>
+    </column>
+    <column name='CP_TYPE' index='4'>
+      <after-value><![CDATA[20]]></after-value>
+    </column>
+    <column name='DC_TYPE' index='5'>
+      <after-value><![CDATA[10]]></after-value>
+    </column>
+    <column name='DUP_TYPE' index='6'>
+      <after-value><![CDATA[20]]></after-value>
+    </column>
+    <column name='DC_MIN_LIMIT_AMT' index='7'>
+      <after-value><![CDATA[990]]></after-value>
+    </column>
+    <column name='DC_MAX_LIMIT_AMT' index='8'>
+      <after-value><![CDATA[9999999999]]></after-value>
+    </column>
+    <column name='DC_AMT_RATE' index='9'>
+      <after-value><![CDATA[333.00]]></after-value>
+    </column>
+    <column name='TV_YN' index='10'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='INTERNET_YN' index='11'>
+      <after-value><![CDATA[1]]></after-value>
+    </column>
+    <column name='CATALOG_YN' index='12'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='BASE_YN' index='13'>
+      <after-value><![CDATA[1]]></after-value>
+    </column>
+    <column name='CP_ISSUE_TYPE' index='14'>
+      <after-value><![CDATA[30]]></after-value>
+    </column>
+    <column name='CP_FIX_QTY' index='15'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='CP_ISSUE_QTY' index='16'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='CP_TOT_SEND_CNT' index='17'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='CP_SMS_SEND_CNT' index='18'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='CP_MAIL_SEND_CNT' index='19'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='CP_FILE_SEND_CNT' index='20'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='CP_NOTE' index='21'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='INSERT_DATE' index='22'>
+      <after-value><![CDATA[2026-03-24 09:02:20]]></after-value>
+    </column>
+    <column name='INSERT_ID' index='23'>
+      <after-value><![CDATA[PROC]]></after-value>
+    </column>
+    <column name='MODIFY_DATE' index='24'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='MODIFY_ID' index='25'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='USE_YN' index='26'>
+      <after-value><![CDATA[1]]></after-value>
+    </column>
+    <column name='MEDIA_CODE' index='27'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='CP_EDATE_ORIG' index='28'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='MANUAL_YN' index='29'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='PAID_YN' index='30'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='REVIEW_ID' index='31'>
+      <after-value><![CDATA[PROC]]></after-value>
+    </column>
+    <column name='REVIEW_DATE' index='32'>
+      <after-value><![CDATA[2026-03-24 09:02:20]]></after-value>
+    </column>
+    <column name='REG_ISSUE_QTY' index='33'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='COUPON_SALE_GB_CODE' index='34'>
+      <after-value><![CDATA[21]]></after-value>
+    </column>
+    <column name='CP_RETURN_QTY' index='35'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='CP_DISPLAY_YN' index='36'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='TVAPP_YN' index='37'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='DESIGNATION_REVIEW_YN' index='38'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='DESIGNATION_REVIEW_ID' index='39'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='DESIGNATION_REVIEW_DATE' index='40'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='EVENT_NAME' index='41'>
+      <after-value><![CDATA[3月生日會員專屬]]></after-value>
+    </column>
+    <column name='RESTRICTED_GOODS' index='42'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='REVIEW_STATE' index='43'>
+      <after-value><![CDATA[90]]></after-value>
+    </column>
+    <column name='BACK_PIECES_REMARKS' index='44'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='DC_LIMIT_LOW_MARGIN' index='45'>
+      <after-value><![CDATA[300.00]]></after-value>
+    </column>
+    <column name='SUPER_CP_YN' index='46'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='DC_LIMIT_LOW_MARGIN_TYPE' index='47'>
+      <after-value><![CDATA[10]]></after-value>
+    </column>
+    <column name='OUTSIDE_IMPORT_LIST_YN' index='48'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='IMPORT_COUNT' index='49'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='EXCLUSION_CONDITIONS' index='50'>
+      <after-value><![CDATA[1]]></after-value>
+    </column>
+    <column name='USABLE_CONDITIONS' index='51'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='MD_NOTE' index='52'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='SIGN_SEQ' index='53'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='DO_FLAG' index='54'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='MK_CANCEL_NOTE' index='55'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='MD_APPLY_DATE' index='56'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='SALE_GB_KIND' index='57'>
+      <after-value><![CDATA[3]]></after-value>
+    </column>
+    <column name='WEIGHTING_FLAG' index='58'>
+      <after-value><![CDATA[10]]></after-value>
+    </column>
+    <column name='ISSUE_STATE' index='59'>
+      <after-value><![CDATA[00]]></after-value>
+    </column>
+    <column name='PROC_ISSUE_DATE' index='60'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='CP_USE_TRANS_YN' index='61'>
+      <after-value><![CDATA[1]]></after-value>
+    </column>
+    <column name='LIVE_YN' index='62'>
+      <after-value><![CDATA[0]]></after-value>
+    </column>
+    <column name='PRODUCT_PAGE_DISPLAY_YN' index='63'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='CP_TAG' index='64'>
+      <after-value isNull='true'/>
+    </column>
+    <column name='BASE_FILE_NAME' index='65'>
+      <after-value isNull='true'/>
+    </column>
+</operation>

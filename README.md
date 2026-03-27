@@ -14,6 +14,7 @@ This repository contains standalone Go practice labs.
 - `lab8`: 讀取及寫入activeMQ，不同的queue name，或TOPIC
 - `lab9`: MONGODB CRUD
 - `lab10`: viper + config
+- `lab11`: parser xml
 
 Each lab is organized as its own Go module with this baseline layout:
 
