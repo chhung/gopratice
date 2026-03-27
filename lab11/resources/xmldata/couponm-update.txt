@@ -1,0 +1,14 @@
+<operation table='FUBON.TF_TCOUPONM' type='UPDATE' opType='UPDATE_FIELDCOMP' txInd='BEGIN' ts='2026-03-23 16:09:30.000470' numCols='66' position='00000015790051770582'>
+    <column name='CP_CODE' index='0'>
+      <before-value><![CDATA[202603180072]]></before-value>
+      <after-value><![CDATA[202603180072]]></after-value>
+    </column>
+    <column name='CP_ISSUE_QTY' index='16'>
+      <before-value><![CDATA[1396117]]></before-value>
+      <after-value><![CDATA[1396118]]></after-value>
+    </column>
+    <column name='CP_RETURN_QTY' index='35'>
+      <before-value><![CDATA[5]]></before-value>
+      <after-value><![CDATA[6]]></after-value>
+    </column>
+</operation>

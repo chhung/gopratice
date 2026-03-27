@@ -15,17 +15,3 @@
       <after-value><![CDATA[2026-03-24 08:00:01]]></after-value>
     </column>
 </operation>
-<operation table='FUBON.TF_TVHOTGOODS' type='UPDATE' opType='UPDATE_FIELDCOMP' txInd='WHOLE' ts='2026-03-24 00:00:01.022741' numCols='5' position='00000015810045660689'>
-    <column name='BASE_DATE' index='0'>
-      <after-value><![CDATA[20260324]]></after-value>
-    </column>
-    <column name='GOODS_CODE' index='1'>
-      <after-value><![CDATA[12959434]]></after-value>
-    </column>
-    <column name='GOODS_TYPE' index='2'>
-      <after-value><![CDATA[2]]></after-value>
-    </column>
-    <column name='INSERT_DATE' index='4'>
-      <after-value><![CDATA[2026-03-24 08:00:01]]></after-value>
-    </column>
-</operation>

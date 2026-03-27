@@ -1,0 +1,32 @@
+<operation table='FUBON.TF_TCOUPONDT_EXC' type='INSERT' opType='INSERT' txInd='MIDDLE' ts='2026-03-24 03:20:38.022273' numCols='10' position='00000015830006316911'>
+    <column name='CP_CODE' index='0'>
+      <after-value><![CDATA[202603240039]]></after-value>
+    </column>
+    <column name='CP_SEQ' index='1'>
+      <after-value><![CDATA[00001]]></after-value>
+    </column>
+    <column name='CON_TYPE_EXC' index='2'>
+      <after-value><![CDATA[30]]></after-value>
+    </column>
+    <column name='CON_CODE_EXC' index='3'>
+      <after-value><![CDATA[12968764]]></after-value>
+    </column>
+    <column name='USE_YN' index='4'>
+      <after-value><![CDATA[1]]></after-value>
+    </column>
+    <column name='INSERT_DATE' index='5'>
+      <after-value><![CDATA[2026-03-24 11:20:38]]></after-value>
+    </column>
+    <column name='INSERT_ID' index='6'>
+      <after-value><![CDATA[04498]]></after-value>
+    </column>
+    <column name='MODIFY_DATE' index='7'>
+      <after-value><![CDATA[2026-03-24 11:20:38]]></after-value>
+    </column>
+    <column name='MODIFY_ID' index='8'>
+      <after-value><![CDATA[04498]]></after-value>
+    </column>
+    <column name='CATEGORY_LEVEL' index='9'>
+      <after-value isNull='true'/>
+    </column>
+</operation>
