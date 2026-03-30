@@ -19,6 +19,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	// 這是一個安全的方式來構建文件路徑，避免了直接拼接字符串可能帶來的問題
+	// （如路徑分隔符錯誤等）。
 	filePath := filepath.Join("resources", "xmldata", *file)
 
 	if err := app.Run(filePath); err != nil {
