@@ -116,7 +116,9 @@ func (c *Consumer) subscribe() error {
 			continue
 		}
 
-		subscription, err := c.conn.Subscribe(item.destination, stomp.AckAuto)
+		subscription, err := c.conn.Subscribe(item.destination, stomp.AckAuto,
+			stomp.SubscribeOpt.Header("activemq.prefetchSize", "5000"),
+		)
 		if err != nil {
 			return fmt.Errorf("subscribe %s %s: %w", item.label, item.destination, err)
 		}
