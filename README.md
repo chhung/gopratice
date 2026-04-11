@@ -17,6 +17,7 @@ This repository contains standalone Go practice labs.
 - `lab11`: parser xml
 - `lab12`: 簡易的activeMQ連線。
 - `lab13`: 簡易資料庫連線，展示解耦
+- `lab14`: Graceful Shutdown
 
 Each lab is organized as its own Go module with this baseline layout:
 
