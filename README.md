@@ -4,6 +4,7 @@ This repository contains standalone Go practice labs.
 
 ## Labs
 
+- `lab-tmp`: 單純作任何練習用
 - `lab1`: a minimal application structure for simple operations
 - `lab2`: a minimal HTTP service structure with message endpoints
 - `lab3`: input normalization that removes all whitespace from a line of text
