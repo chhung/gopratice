@@ -3,21 +3,37 @@ package main
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
 func main() {
-	var wg sync.WaitGroup
-	wg.Add(4)
-	go worker(1, &wg)
-	go worker(2, &wg)
-	go worker(3, &wg)
-	go worker(4, &wg)
+	inputCh := make(chan string, 5)
 
-	wg.Wait()
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go worker(1, &wg, inputCh)
+
+	go func() {
+		fmt.Println("waitting for goroutine.")
+		wg.Wait()
+		close(inputCh)
+		fmt.Println("goroutine done.")
+	}()
+
+	time.Sleep(time.Second * 6)
+	for input := range inputCh {
+		fmt.Printf("[%s] Received input: %s\n",
+			time.Now().Format("2006-01-02 15:04:05"), input)
+	}
+
 	fmt.Println("Hello, World!")
 }
 
-func worker(id int, wg *sync.WaitGroup) {
+func worker(id int, wg *sync.WaitGroup, input chan<- string) {
 	defer wg.Done()
-	fmt.Printf("Worker %d: Working...\n", id)
+	for i := 0; i < 5; i++ {
+		time.Sleep(time.Second * 1)
+		input <- fmt.Sprintf("[%s] Worker %d: Working...",
+			time.Now().Format("2006-01-02 15:04:05"), id)
+	}
 }
