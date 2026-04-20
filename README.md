@@ -19,6 +19,7 @@ This repository contains standalone Go practice labs.
 - `lab12`: 簡易的activeMQ連線。
 - `lab13`: 簡易資料庫連線，展示解耦
 - `lab14`: Graceful Shutdown
+- `lab15`: dummy data to mongodb
 
 Each lab is organized as its own Go module with this baseline layout:
 

@@ -35,15 +35,15 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Hour)
 	defer cancel()
 
-	client, err := mongo.Connect(options.Client().ApplyURI("mongodb://mongoadmin:secret@127.0.0.1:27017"))
+	client, err := mongo.Connect(options.Client().ApplyURI("mongodb://127.0.0.1:27017"))
 	if err != nil {
 		log.Fatal("connect error:", err)
 	}
 	defer client.Disconnect(ctx)
 
 	customerIDs := generateCodes("C", 100000)
-	vendorIDs := generateVendorIDs(327574, 520000)
-	batchSize := 500
+	vendorIDs := generateVendorIDs(1, 520000)
+	batchSize := 5000
 
 	total := len(vendorIDs)
 	for i := 0; i < total; i += batchSize {
@@ -58,7 +58,7 @@ func main() {
 			log.Fatalf("batch insert error at %d-%d: %v", i, end-1, err)
 		}
 		fmt.Printf("inserted %d / %d\n", end, total)
-		time.Sleep(500 * time.Millisecond)
+		//time.Sleep(500 * time.Millisecond)
 	}
 	fmt.Printf("insert completed, total: %d\n", total)
 }
