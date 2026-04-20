@@ -42,7 +42,7 @@ func main() {
 	defer client.Disconnect(ctx)
 
 	customerIDs := generateCodes("C", 100000)
-	vendorIDs := generateVendorIDs(256674, 520000)
+	vendorIDs := generateVendorIDs(327574, 520000)
 	batchSize := 500
 
 	total := len(vendorIDs)
@@ -58,6 +58,7 @@ func main() {
 			log.Fatalf("batch insert error at %d-%d: %v", i, end-1, err)
 		}
 		fmt.Printf("inserted %d / %d\n", end, total)
+		time.Sleep(500 * time.Millisecond)
 	}
 	fmt.Printf("insert completed, total: %d\n", total)
 }
