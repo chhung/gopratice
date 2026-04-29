@@ -31,4 +31,4 @@ Each lab is organized as its own Go module with this baseline layout:
 
 ## Notes
 
-- `lab3` runs with `go run ./cmd/app` and treats `1234` and `12 34` as the same normalized input.
+- `lab3` runs with `go run ./cmd/app` and treats `1234` and `12 34` as the same normalized input .
